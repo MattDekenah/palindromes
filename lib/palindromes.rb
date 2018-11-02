@@ -16,6 +16,9 @@ class Palindromes
 	end
 
 	def is_palindrome(word)
-		word&.downcase == word&.downcase&.reverse
+		if word
+			return word&.downcase == word&.downcase&.reverse
+		end
+		false
 	end
 end

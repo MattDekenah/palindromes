@@ -23,6 +23,10 @@ describe Palindromes do
     it "takes a non-palindrome and returns false" do
      expect(@palindromes.is_palindrome("Redden")).to be false
     end
+
+    it "takes a nil value and handles this by returning false" do
+     expect(@palindromes.is_palindrome(nil)).to be false
+    end
   end
 
   describe "#process_file" do
