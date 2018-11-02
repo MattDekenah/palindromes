@@ -27,7 +27,7 @@ describe Palindromes do
 
   describe "#process_file" do
   	it "processes a csv of words and outputs an array of valid palindromes from those words" do
-  		expect(@palindromes.process_file).to contain_exactly("REDDER", "civic", "Madam", "radar", "REFER")
+  		expect(@palindromes.process_file).to contain_exactly("REDDER", "civic", "Madam", "radar", "REFER", "Rotor")
   	end
   end
 end

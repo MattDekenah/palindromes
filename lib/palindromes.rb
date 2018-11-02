@@ -8,14 +8,14 @@ class Palindromes
 	def process_file
 		palindromes = []
 		CSV.foreach(@path_to_csv) do |line|
-			line.each do |word|
-				palindromes << word.strip if is_palindrome(word.strip)
+			line&.each do |word|
+				palindromes << word&.strip if is_palindrome(word&.strip)
 			end
 		end
 		palindromes
 	end
 
 	def is_palindrome(word)
-		word.downcase == word.downcase.reverse
+		word&.downcase == word&.downcase&.reverse
 	end
 end
